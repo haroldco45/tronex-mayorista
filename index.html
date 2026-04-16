@@ -1,39 +1,123 @@
-<button onclick="enviarWhatsApp()" class="btn-glow w-full flex items-center justify-between p-5 bg-green-600 text-white rounded-3xl font-bold transition-all">
-    <div class="flex items-center space-x-3">
-        <i class="fab fa-whatsapp text-2xl"></i>
-        <div class="text-left">
-            <span class="block text-lg">EMIL SUÁREZ</span>
-            <span class="text-[10px] uppercase tracking-widest opacity-80">Asesor Comercial</span>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASESOR TRONEX </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .tronex-gradient {
+            background: linear-gradient(135deg, #ED1C24 0%, #8b1115 100%);
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(237, 28, 36, 0.2);
+            border-radius: 2.5rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .input-style {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .input-style:focus {
+            border-color: #ED1C24;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card overflow-hidden">
+        <div class="p-8 text-center bg-black/40">
+            <img src="tronex.PNG" alt="Logo Tronex" class="h-16 mx-auto mb-3">
+            <h1 class="text-xl font-black italic tracking-tighter">MAYORISTA MONTERÍA</h1>
+            <div class="h-1 w-20 tronex-gradient mx-auto mt-2 rounded-full"></div>
+        </div>
+
+        <div class="p-6 space-y-6">
+            <div class="space-y-3">
+                <input type="text" id="nombre" placeholder="Nombre o Empresa" class="input-style w-full p-4 rounded-2xl text-sm">
+                <input type="tel" id="celular" placeholder="Celular" class="input-style w-full p-4 rounded-2xl text-sm">
+                <select id="motivo" class="input-style w-full p-4 rounded-2xl text-sm">
+                    <option value="Pedido Mayorista" class="bg-gray-900">📦 Pedido Mayorista</option>
+                    <option value="Lista de Precios" class="bg-gray-900">💰 Lista de Precios</option>
+                    <option value="Distribución" class="bg-gray-900">🤝 Alianza Comercial</option>
+                </select>
+            </div>
+
+            <div class="space-y-3">
+                <button onclick="enviarWhatsApp()" class="btn-glow w-full flex items-center justify-between p-5 bg-green-600 text-white rounded-3xl font-bold transition-all">
+                    <div class="flex items-center space-x-3">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <div class="text-left">
+                            <span class="block">EMIL SUÁREZ</span>
+                            <span class="text-[10px] uppercase opacity-80">Asesor Comercial</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right opacity-50"></i>
+                </button>
+
+                <a href="tronex1.pdf" target="_blank" class="w-full flex items-center justify-center space-x-3 p-4 tronex-gradient text-white rounded-3xl font-black italic tracking-widest">
+                    <i class="fas fa-bolt text-yellow-400"></i>
+                    <span>VER CATÁLOGO 2026</span>
+                </a>
+            </div>
+
+            <div class="flex justify-center space-x-6 pt-2">
+                <a href="https://www.instagram.com/tronexcolombia" target="_blank" class="text-gray-500 hover:text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/TronexColombia/" target="_blank" class="text-gray-500 hover:text-blue-500 text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:emilsuarez21@gmail.com" class="text-gray-500 hover:text-red-500 text-2xl"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="bg-black/60 p-6 text-center border-t border-white/5">
+            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Proyecto Desarrollado por</p>
+            <p class="text-sm font-black text-white uppercase tracking-tighter">VIBRAS POSITIVAS HM</p>
+            <p class="text-[9px] text-gray-600 mt-2">DERECHOS DE AUTOR © 2026</p>
         </div>
     </div>
-    <i class="fas fa-chevron-right opacity-50"></i>
-</button>
 
-<script>
-function enviarWhatsApp() {
-    // Captura de datos de los inputs
-    const nom = document.getElementById('nombre').value;
-    const cel = document.getElementById('celular').value;
-    const mot = document.getElementById('motivo').value;
-    
-    // Número destino verificado
-    const numeroWhatsApp = "573207919193"; 
+    <script>
+        function enviarWhatsApp() {
+            const nom = document.getElementById('nombre').value;
+            const cel = document.getElementById('celular').value;
+            const mot = document.getElementById('motivo').value;
+            const num = "573207919193"; // Emil Suárez
 
-    // Validación simple
-    if (!nom || !cel) {
-        alert("⚠️ Por favor, ingresa tu nombre y celular para contactar al asesor.");
-        return;
-    }
+            if (!nom || !cel) {
+                alert("Por favor, ingresa tu nombre y celular.");
+                return;
+            }
 
-    // Construcción del mensaje
-    const mensaje = `⚡ *TRONEX MAYORISTA MONTERÍA* ⚡%0A%0A` +
-                    `👤 *Cliente:* ${nom}%0A` +
-                    `📱 *Celular:* ${cel}%0A` +
-                    `🎯 *Interés:* ${mot}%0A%0A` +
-                    `Hola Emil, vengo de la App. Me gustaría recibir información mayorista.`;
+            const msg = `⚡ *TRONEX MAYORISTA MONTERÍA* ⚡%0A%0A` +
+                        `👤 *Cliente:* ${nom}%0A` +
+                        `📱 *Celular:* ${cel}%0A` +
+                        `🎯 *Interés:* ${mot}%0A%0A` +
+                        `Hola Emil, me interesa información mayorista.`;
 
-    // Apertura de WhatsApp
-    const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}`;
-    window.open(url, '_blank');
-}
-</script>
+            window.open(`https://api.whatsapp.com/send?phone=${num}&text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
